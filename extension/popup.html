@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="popup.css">
+
+</head>
+
+<body>
+    
+    <div class="tabContainer">
+        <div class="buttonContainer">
+            <button id="phishcare">PhishCare</button>
+            <button id="adblock">Ad Block</button>
+            <button id="diceware">Diceware</button>
+            <button id="about">About</button>
+        </div>
+        <div class="tabPanel" id="phishpanel">
+            <p id="phishtitle">PhishCare
+                <label class="switch">
+                    <input type="checkbox" id="pslider" checked>
+                    <span class="slider round"></span>
+                </label></p>
+            <div class="phishinfo">
+                <div class="normaltext" style="text-align: center;padding-top: 10px">Latest Visited URL Domain is</div>
+                <div id="visiteddomain" style="text-align: center;padding-top: 5px;font-size: medium;"></div>
+                <div id="sitedetected"></div>
+            </div>
+        </div>
+        <div class="tabPanel" id="adpanel">
+            <p id="phishtitle">Ad Block
+                <label class="switch">
+                    <input type="checkbox" id="adslider" checked>
+                    <span class="slider round"></span>
+                </label></p>
+            <div class="adinfo">
+                <p class="normaltext" style="padding-top: 5px;padding-left: 5px;">Blocked ads:</p>
+                <hr style="width: 95%;">
+                <p class="normaltext" id="adblockedthispage" style="padding-left: 5px;">Ad Blocked This Page: 0</p>
+
+            </div>
+        </div>
+        <div class="tabPanel" id="dicepanel">
+            <div style="text-align: center;font-size: medium;">Generate High-Entropy Passwords</div>
+            <div style="text-align: center;font-size: medium;padding-top: 5px;">Number of Dice Rolls</div>
+            <div class="dicebuttonpanel">
+                <button id="2">2</button>
+                <button id="3">3</button>
+                <button id="4">4</button>
+                <button id="5">5</button>
+                <button id="6">6</button>
+                <button id="7">7</button>
+            </div>
+            <div class="diceinfo">
+                <div class="normaltext" style="padding-top: 5px;">Generated Password:</div>
+                <div class="normaltext" id="passwordselected" style="padding-top: 3px;"></div>
+                <button id="copyclipboard">Copy</button>
+                <hr style="width: 95%;">
+                <div class="normaltext">One of the Passwords Out of:</div>
+                <div class="normaltext" id="totalpasswords" style="padding-top: 3px;"></div>
+
+            </div>
+        </div>
+        <div class="tabPanel" id="aboutpanel">
+            <div class="aboutPanels" id="aboutpanel1">
+            <div style="font-size: medium;padding-left: 3px;text-align: center;">Application : Web Care</div>
+            <div style="font-size: medium;padding-left: 3px;padding-top: 5px;text-align: center;">Version : 0.1</div>
+            <div class="aboutinfo">
+            <div style="padding-left: 5px;font-size: medium;padding-top: 4px;"><a href="https://en.wikipedia.org/wiki/Phishing" target="_blank">About Phishing</a><br></div>
+            <div style="padding-left: 5px;font-size: medium;padding-top: 4px;"><a href="https://en.wikipedia.org/wiki/Diceware" target="_blank">About Diceware</a></div>    
+            </div>
+            <div style="text-align: center;font-size: small;padding-top: 20px;">If you have any suggestions or bug reports<br></div>
+            <div style="text-align: center;font-size: small;">please use feedback<br></div>
+            <button id="feedback">Feedback</button>
+        </div>
+        <div class="aboutPanels" id="aboutpanel2">
+            <div style="font-size: medium;padding-left: 3px;text-align: center;">Feedback<br></div>
+            <input type="text" id="email" name="emailaddress" placeholder="Name/Email Address" style="height:40px" autocomplete="off">
+            <textarea id="comment" name="comment" placeholder="Comment" rows="6" cols="37"></textarea>
+            <button class="feedbackbutton" id="feedbacksubmit" style="margin-left: 7.5px;float: left;">Submit</button>
+            <div id="checkfield" style="float:left;padding-top: 10px;margin-left: 18px;font-size: small;"></div>
+            <button class="feedbackbutton" id="aboutback" style="margin-left: 105px;float: left;">Back</button>
+        </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="popup.js"></script>
+<script src="diceware.js"></script>
+<script src="adblock.js"></script>
+<script src="phish.js"></script>
+<script src="about.js"></script>
+
+</html>
